@@ -1,0 +1,72 @@
+﻿.body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  width: 800px;
+}
+
+.navigation {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navigation li {
+  display: inline-block;
+  vertical-align: middle;
+
+}
+
+.navigation li.active a {
+  color: #b52e1e;
+  text-decoration: underline;
+}
+.navigation li.active a:hover {
+  color: #b52e1e;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #6491c6;
+  padding-right: 10px;
+}
+
+.navigation a:hover {
+  color: #163b61;
+}
+
+.intro {
+  background-color: #6491c6;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+}
+.intro p {
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.content-block {
+/* Честно говоря я вообще не поняла для чего мы должны были использовать этот класс, или это нужно для дальнейшей подвязки флексов? */
+}
+
+.title {
+  background-color: #c3d4e9;
+  color: #163b61;
+  padding: 10px;
+}
+
+.btn {
+  display: inline-block;
+  vertical-align: top;
+  text-transform: uppercase;
+  background-color: #6491c6;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  font-weight: bold;
+}

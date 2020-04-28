@@ -1,0 +1,168 @@
+﻿* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  width: 960px;
+  height: 120px;
+  margin: 0 auto;
+  padding: 5px;
+  border: 1px solid darkgray;
+  color: #fff;
+  text-align: center;
+}
+
+/* разнесла все классы для того, чтобы можно было их свободно комбинировать в html и не раздувать в будущем таблицу стилей при добавлении новых блоков */
+
+.jc-center {
+  justify-content: center;
+}
+
+.jc-end {
+  justify-content: flex-end;
+}
+
+.jc-between {
+  justify-content: space-between;
+}
+
+.jc-around {
+  justify-content: space-around;
+}
+
+.center {
+  align-items: center;
+}
+
+.stretch {
+  align-items: stretch;
+}
+
+.end {
+  align-items: flex-end;
+}
+
+.as-center {
+  align-self: center;
+}
+
+.row-rev {
+  flex-direction: row-reverse;
+}
+
+.container > div:nth-child(1) {
+  height: 30px;
+  background-color: #ff0000;
+}
+
+.container > div:nth-child(2) {
+  height: 100px;
+  background-color: #ffa500;
+}
+
+.container > div:nth-child(3) {
+  height: 50px;
+  background-color: #008000;
+}
+
+.container > div:nth-child(4) {
+  height: 70px;
+  background-color: #ff6347;
+}
+
+.container > div {
+  width: 8%;
+}
+
+.stretch > div:nth-child(1n) {
+  height: auto;
+}
+
+.box3 {
+  height: 50px !important;
+}
+
+/* предполагаю, что задачу выполнила не максимально оптимально, хотелось бы ещё избавиться от класса w66p — эта ширина является остатком от 100% минус w33p, т.е. его как-то можно упразднить, но перепробовав множество способов, решения не нашла; так же хотелось бы автоматически подбирать высоту в блоках 6 и 9 половине элементов, а не как сейчас - 25%+50%+25% */
+.boxes, .pseudo {
+  display: flex;
+  flex-wrap: wrap;
+  width: 960px;
+  border: 1px solid #000;
+  margin: 0 auto;
+}
+
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(20% - 16px);
+  height: 180px;
+  margin: 8px;
+}
+
+.box > div, .pseudo1 > div {
+  background-color: #774899;
+  margin: 2px;
+  width: 100%;
+}
+
+.box > .w25p {
+  width: calc(25% - 4px);
+}
+
+.box > .w33p {
+  width: calc(33.33% - 4px);
+}
+
+.box > .w50p {
+  width: calc(50% - 4px);
+}
+
+.box > .w66p {
+  /* этот класс пришлось добавить, поскольку в блоках 1, 2 и 9 не удалось совладать с flex-grow */
+  width: calc(66.66% - 4px);
+  /*flex-grow: 1;*/
+}
+
+.box > .h25p {
+  /* хотелось бы избавиться от одного из этих двух классов высоты, со stretch/justify в данном случае управиться не получилось */
+  /* если не использовать эти высоты, то высота всех блоков становится равной, а это не соответствует рисунку */
+  height: calc(25% - 4px);
+}
+
+.box > .h50p {
+  height: calc(50% - 4px);
+}
+
+/* псевдоклассами */
+/* разными цветами и рамкой разукрасила/пометила выборку формулами в псевдоклассах */
+.pseudo > .box > div {
+  width: calc(33.33% - 4px);
+  background-color: #AA7EE0;
+}
+
+.pseudo > div:nth-child(-n + 4) > div:first-child,
+.pseudo > div:nth-child(-n + 4) > div:last-child,
+.pseudo > div:nth-child(2) > div:nth-child(4) {
+  width: 100%;
+  background-color: #E0DF94;
+}
+
+.pseudo > div:nth-child(-n + 2) > div:nth-child(3n + 2),
+.pseudo > div:nth-child(-n + 2) > div:nth-child(3n + 3),
+.pseudo > div:nth-child(5) > div:nth-child(-n + 2) {
+  width: calc(50% - 4px);
+  background-color: #8fbc8f;
+}
+
+.pseudo > div:nth-child(3n + 1) > div:first-child,
+.pseudo > div:nth-child(3n + 1) > div:last-child {
+  height: calc(25% - 4px);
+  border: 2px dashed black;
+}
+
+.pseudo > div:nth-child(4) > div:nth-child(3) {
+  width: calc(66.67% - 4px);
+  background-color: #ABE0D8;
+}

@@ -1,0 +1,20 @@
+@import url(components/normalize.css);
+@import url(components/form.css);
+@import url(components/typography.css);
+@import url(components/common.css);
+
+@font-face {
+  font-family: 'comfortaa';
+  src: url('../fonts/Comfortaa-Regular.ttf') format('truetype'),
+  url('../fonts/Comfortaa-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'comfortaa';
+  src: url('../fonts/Comfortaa-Bold.ttf') format('truetype'),
+  url('../fonts/Comfortaa-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}

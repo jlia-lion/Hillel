@@ -1,0 +1,60 @@
+﻿.container {
+  background-color: #fff;
+  padding: 10px;
+}
+
+.row {
+  height: 260px;
+  margin-bottom: 20px;
+}
+
+.red {
+  background-color: #e4002b;
+}
+
+.blue {
+  background-color: #2349d9;
+}
+
+.block {
+  height: 100%;
+}
+
+.row::before,
+.row::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.fl {
+  float: left;
+  margin-right: 20px;
+}
+
+.fr {
+  float: right;
+}
+
+.sm {
+  width: calc(25% - 15px);
+}
+
+.lg {
+  width: calc(75% - 5px);
+}
+
+.fix {
+  width: 200px;
+}
+
+.big {
+  width: calc(100% - 2*200px - 2*20px);
+}
+
+.middle {
+  width: calc(50% - 10px);
+}
+
+
+

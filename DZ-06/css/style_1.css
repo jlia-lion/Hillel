@@ -1,0 +1,89 @@
+﻿*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 20px 0;
+  font: 16px Arial, Helvetica, sans-serif;
+}
+
+p, h2, h3 {
+  margin: 0 0 1rem;
+}
+
+.center {
+  text-align: center;
+  max-width: 40%;
+  margin: 0 auto;
+}
+
+a {
+  padding: 10px 30px;
+  background-color: #418cd0;
+  font-weight: bold;
+  border: 2px ridge #418cd0;
+  box-shadow: 0.2em 0.2em 0.3em #2c85d5;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  display: inline-block;
+}
+
+a:hover {
+  /*margin: 0 0 18px 0;*/
+  padding: 10px 30px;
+  background-color: #fff;
+  font-weight: bold;
+  border: 2px ridge #418cd0;
+  box-shadow: 0.2em 0.2em 0.3em #2c85d5;
+  text-decoration: none;
+  color: #418cd0;
+}
+
+.hr {
+  border-top: 1px solid #f49900;
+  border-bottom: 1px solid #b48ec9;
+  margin: 2.5% 0;
+  padding: 0 0 0.25% 4%;
+}
+
+.padding {
+  padding: 4% 2.5%;
+}
+
+.padding-2 {
+  padding: 0 2.5%;
+}
+
+.row::before,
+.row::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.col-25 {
+  float: left;
+  width: calc(25% - 20px);
+  margin: 0 10px;
+}
+
+.col-50 {
+  float: right;/* флотаю вправо так как хочу чтобы при перескакивании вниз картинка оставалась сверху */
+  width: calc(50% - 1px);
+  margin: 0 0 -4px 1px;
+}
+
+img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+.bsh {
+  margin: 5.5% 0;
+  box-shadow: 0.4em 0.4em 0.4em #c3c2e4;
+}
+
+.border-radius {
+  border-radius: 5px;
+}

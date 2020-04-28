@@ -1,0 +1,85 @@
+﻿h1 {
+  color: blue;
+  letter-spacing: 10px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h2 {
+  text-indent: 40px;
+}
+
+.navigation1, .navigation2 {
+  text-align: center;
+}
+
+.navigation1 > a {
+  color: black;
+}
+
+.navigation1 > a:hover {
+  color: green;
+}
+
+.navigation1 > a:visited {
+  color: tomato;
+}
+
+.navigation2 > a.nav-item {
+  color: black;
+}
+
+.navigation2 > a.nav-item:hover {
+  color: green;
+}
+
+.navigation2 > a.nav-item:visited {
+  color: tomato;
+}
+
+p, p.text_italic {
+  line-height: 2;
+  text-indent: 40px;
+}
+
+p.text_italic {
+  font-style: italic;
+}
+
+p::first-letter{
+  text-transform: uppercase; /* гарантирую, что первая буква всегда большая, даже если кто-то ошибся */
+  font-size: 20px;
+}
+
+.green { /* не указываю span, поскольку хочу чтобы этот класс применялся к любому тегу */
+  color: green;
+}
+
+ul li:nth-child(odd) {
+  color: red;
+}
+
+table.tab1, table.tab1 td {
+  border: black 1px solid;
+  border-collapse: separate;
+}
+
+table.tab1 tr:nth-child(odd) {
+  background-color: red;
+  color: white;
+}
+
+table.tab1 tr:nth-child(even) {
+  background-color: black;
+  color: white;
+}
+
+table.tab2 tr.red {
+  background-color: red;
+  color: white;
+}
+
+table.tab2 tr.black {
+  background-color: black;
+  color: white;
+}
