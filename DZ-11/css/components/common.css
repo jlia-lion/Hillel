@@ -7,25 +7,32 @@
   outline: none;
 }
 
-header, .form-group, .search-form, section button, aside button, img {
+header, .form-group, .search-form, article > img, .card > img, .hr {
   margin-bottom: 30px;
 }
 
 .header {
   background-color: #f5f8fb;
-  padding-top: 30px;
+  padding: 30px 0;
+}
+
+main.container {
+  padding-bottom: 30px;
+}
+
+section, footer, .hr, .card + .card {
+  border-top: 1px solid #e0e9f0;
 }
 
 .hr {
   border-bottom: 1px solid #e0e9f0;
 }
 
-footer {
-  border-top: 1px solid #e0e9f0;
-  padding: 30px 0;
+section, footer, .card + .card {
+  padding-top: 20px;
 }
 
-.content {
+.container {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 15px;
@@ -39,15 +46,15 @@ section, .card {
   width: 120px;
 }
 
-section ol {
+article ol {
   padding-left: 18px;
 }
 
-section ul > li::before {
+article ul > li::before {
   content: "— ";
 }
 
-.navigation ul, .breadcrumbs, .social-networks, .flex {
+.navigation ul, .breadcrumbs, .social-networks, .flex, .space-between {
   display: flex;
   flex-wrap: wrap;
 }
@@ -67,12 +74,14 @@ section ul > li::before {
   font-weight: 500;
 }
 
-/*
-.navigation a:active {
-  background-color: #009688;
-  color: #000;
+.navigation li.active a {
+  color: #009688;
 }
-*/
+
+.navigation li.active a:hover {
+  color: #009688;
+  text-decoration: underline #000;
+}
 
 .breadcrumbs {
   color: #78909c;
@@ -95,14 +104,18 @@ section ul > li::before {
   display: none;
 }
 
-.flex-left {
+.article {
   width: 70%;
   padding: 0 30px 0 0;
 }
 
-.flex-right {
+.sidebar {
   width: 30%;
   padding: 0 0 0 30px;
+}
+
+.space-between {
+  justify-content: space-between;
 }
 
 a:hover {
@@ -110,11 +123,11 @@ a:hover {
 }
 
 header a, nav a, footer a {
+  color: #000;
   text-decoration: none;
 }
 
-section a {
-  color: #1976d2;
+article a {
   font-style: italic;
 }
 
@@ -202,19 +215,22 @@ input:focus, textarea:focus {
   border-color: #009688;
 }
 
-img {
+article > img, .card > img {
   border-radius: 4px;
 }
 
-.right {
-  text-align: right;
+ul, ol {
+  padding-left: 0;
+  margin-left: 0;
+  line-height: 2.5;
+}
+
+ul li {
+  list-style-type: none;
 }
 
 .social-networks {
   justify-content: left;
-  padding-left: 0;
-  list-style-type: none;
-  margin: 0;
 }
 
 .social-networks li {
@@ -227,7 +243,7 @@ time {
   display: block;
 }
 
-section h4 {
+article h4 {
   color: #546e7a;
   font-style: italic;
 }

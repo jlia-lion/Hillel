@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  font: 16px/1.5 Rubik, sans-serif;
+  font: 16px/1.63 Rubik, sans-serif;
   color: #000;
   background-color: #fff;
   min-width: 320px;
@@ -21,20 +21,6 @@ img {
 
 p, ul, ol {
   margin: 0 0 1.5em;
-}
-
-p {
-  line-height: 1.63;
-}
-
-ul, ol {
-  padding-left: 0;
-  margin-left: 0;
-  line-height: 2.5;
-}
-
-ul li {
-  list-style-type: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -68,7 +54,7 @@ h6 {
 }
 
 a {
-  color: #000;
+  color: #1976d2;
 }
 
 a:hover {
