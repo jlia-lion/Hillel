@@ -72,9 +72,11 @@
             const response = await fetch('https://api.github.com/repos/jlia-lion/Hillel/contents/');
             const data = await response.json();
             let htmlString = `<ul data-addui="filter" data-source="input">`;
+            let filePath = "";
             for (let file of data) {
                 if (`${file.type}` === 'dir') {
-                    htmlString += `<li><a href="${file.path}" target="${file.path}">${file.name}</a></li>`;
+                    filePath = file.name + (file.name.substring(file.name.length - 1, file.name.length) ? "/" : "");
+                    htmlString += '<li><a href="' + filePath + `" target="${file.name}_window">${file.name}</a></li>`;
                 }
             }
             htmlString += '</ul>';
