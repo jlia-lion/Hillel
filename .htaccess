@@ -1,0 +1,23 @@
+Options             +Indexes -ExecCGI +FollowSymLinks -SymLinksIfOwnerMatch
+<IfModule autoindex_module>
+    DirectoryIndex      index.html
+    IndexOptions        FancyIndexing FoldersFirst IgnoreCase IgnoreClient SuppressLastModified SuppressSize SuppressDescription NameWidth=* DescriptionWidth=* SuppressHTMLPreamble
+    IndexOrderDefault   Ascending Name
+    <Files ~ "^.*\.([Hh][Tt][Aa])">
+        Order allow,deny
+        Deny from all
+    </Files>
+
+    IndexIgnore         .??* *~ _* *# css img js upload *.css *.gif *.jpg *.png
+</IfModule>
+
+#ErrorDocument 404 /index.php?page=error&action=404
+RedirectMatch 404 /templates(/|$)
+RedirectMatch 404 /include(/|$)
+RedirectMatch 404 /.git(/|$)
+RedirectMatch 404 /.idea(/|$)
+
+#Require             local
+#Require             ip 127.0.0.1
+#Require             ip ::1
+Require             all granted
