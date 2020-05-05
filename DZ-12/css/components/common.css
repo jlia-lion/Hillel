@@ -3,7 +3,7 @@ body {
 }
 
 main {
-  padding: 20px;
+  padding: 10px;
 }
 
 .h2 {
@@ -85,6 +85,10 @@ img {
   text-transform: uppercase;
 }
 
+a.btn {
+  display: inline-block;
+}
+
 .btn {
   background-color: #3a454d;
   color: #fff;
@@ -92,10 +96,8 @@ img {
   border-radius: 6px;
   padding: 10px 20px;
   text-transform: uppercase;
-  display: table;
-  text-align: center;
   margin: 0 auto;
-  transition: .3s ease-in-out;
+  transition: background-color .3s ease-in-out, color .3s ease-in-out;
 }
 
 .btn:hover {
@@ -104,17 +106,18 @@ img {
 }
 
 @media all and (min-width: 576px) {
-  .card {
-    display: inline-flex;
-    width: calc(50% - 22px);
-    margin: 0 10px 40px 10px;
-  }
-  .hover-box img {
-    width: 50%;
-  }
   .h2 {
     display: table;
     margin: 0 0 30px 10px;
+  }
+  .card-box {
+    display: inline-flex;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .card {
+    width: calc(50% - 10px);
+    margin: 0 5px 20px 5px;
   }
 }
 
@@ -124,14 +127,13 @@ img {
     margin: 0 auto;
   }
   .card {
-    display: inline-flex;
-    width: calc(33% - 22px);
+    width: calc(33% - 10px);
   }
-  .hover-box img {
-    width: 33%;
+  .center.h2 {
+    display: inline-block;
+    text-align: left;
   }
   .h2 {
-    display: table;
     border-bottom: none;
     border-left: 8px solid #465a64;
     padding-left: 15px;

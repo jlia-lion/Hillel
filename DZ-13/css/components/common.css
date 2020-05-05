@@ -1,16 +1,20 @@
+main {
+  padding: 10px;
+}
+
 .card {
-  margin: 20px;
+  margin: 0 15px;
+  outline: 0;
 }
 
 ul {
-  margin-left: 0;
-  padding-left: 0;
+  margin: 0;
+  padding: 0;
   list-style-type: none;
 }
 
 .hover-box ul {
   display: flex;
-  flex-wrap: wrap;
 }
 
 .hover-box a {
@@ -19,11 +23,12 @@ ul {
   color: #fff;
   text-decoration: none;
   background-color: #3a454d;
+  transition: background-color .2s ease-in-out;
+  outline: 0;
 }
 
 .hover-box a:hover {
   background-color: #465a64;
-  transition: .3s ease-in-out;
 }
 
 img {
@@ -46,7 +51,7 @@ img {
   text-decoration: none;
   background-color: rgba(255, 255, 255, 0.3);
   opacity: 0;
-  transition: opacity .3s ease-in-out;
+  transition: opacity .2s ease-in-out;
 }
 
 .card:hover .hover-box {
@@ -79,22 +84,87 @@ img {
 .title-box {
   padding: 20px;
   background-color: #e1e6ea;
-  transition: .3s ease-in-out;
 }
 
 .card:hover .title-box {
   background-color: #3a454d;
+  transition: background-color .2s ease-in-out, color .2s ease-in-out;
 }
 
 .card:hover .title-box h3,
 .card:hover .title-box p {
   color: #fff;
-  transition: .3s ease-in-out;
 }
 
-:root {
-  --charcoal-grey-75: rgba(65, 61, 75, 0.75);
-  --slate: #465a64;
-  --charcoal-grey: #3a454d;
-  --white: #fff;
+.slick-dots {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.slick-dots li {
+  margin: 10px;
+}
+
+li button {
+  padding: 0;
+  font-size: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #3a454d;
+  border: none;
+  outline: 0;
+}
+
+li button:hover {
+  background-color: #e1e6ea;
+  border: 1px solid #3a454d;
+}
+
+@media all and (min-width: 768px) {
+  .slider {
+    position: relative;
+    padding: 0 30px;
+  }
+  .slider .slick-arrow {
+    border: none;
+    font-size: 0;
+    outline: 0;
+  }
+  .slick-prev::before {
+    content: "\ea44";
+    font-size: 30px;
+    color: #3a454d;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    font-family: "icomoon" !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .slick-next::before {
+    content: "\ea42";
+    font-size: 30px;
+    color: #3a454d;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    font-family: "icomoon" !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 }
