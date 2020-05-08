@@ -61,6 +61,7 @@ img {
 .title-box h3,
 .title-box p {
   margin: 0 0 0.6em;
+  transition: background-color .2s ease-in-out, color .2s ease-in-out;
 }
 
 .title-box h3 {
@@ -88,10 +89,12 @@ img {
 
 .card:hover .title-box {
   background-color: #3a454d;
-  transition: background-color .2s ease-in-out, color .2s ease-in-out;
 }
 
-.card:hover .title-box h3,
+.card:hover .title-box h3 {
+  color: #fff;
+}
+
 .card:hover .title-box p {
   color: #fff;
 }

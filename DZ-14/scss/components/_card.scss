@@ -1,15 +1,88 @@
+@charset "utf-8";
+
+/*
+ * ========== card.scss ========== отметила, чтобы видеть, какие блоки в скомпилированном main.css к чему относятся
+ */
 .card {
+  position: relative;
+  margin-bottom: 30px;
 
-}
+  &:hover {
+    .hover-box {
+      opacity: 1;
+    }
+  }
 
-.card-image {
+  .hover-box {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, .3);
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+  }
 
+  .plus {
+    position: relative;
+    flex-grow: 1;
+  }
+
+  .plus::after,
+  .plus::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 13px;
+    height: 2px;
+    background-color: $white;
+    transform: translate(-50%, -50%);
+    content: "";
+  }
+
+  .plus::before {
+    width: 17px;
+    height: 2px;
+  }
+
+  .plus::after {
+    width: 2px;
+    height: 17px;
+  }
+
+  @media all and (min-width: 576px) {
+    width: calc(50% - 10px);
+    margin: 0 5px 20px;
+  }
+
+  @media all and (min-width: 768px) {
+    width: calc(33% - 10px);
+  }
 }
 
 .card-title {
+  margin: 0;
+  padding: 15px;
+  color: $white;
+  font-weight: normal;
+  font-size: 16px;
+  text-transform: uppercase;
+  background-color: #292f36;
 
+  @media all and (min-width: 768px) {
+    font-size: 18px;
+  }
 }
 
-.card-description {
-
+@media all and (min-width: 576px) {
+  .card-box {
+    display: inline-flex;
+    flex-wrap: wrap;
+    text-align: center;
+  }
 }

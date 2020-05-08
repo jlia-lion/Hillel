@@ -1,63 +1,68 @@
+@charset "utf-8";
+
+/*
+ * ========== base.scss ========== отметила, чтобы видеть, какие блоки в скомпилированном main.css к чему относятся
+ */
 html {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *, *::before, *::after {
-	box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 body {
-	color: $base-text-color;
-	background: $base-background-color;
-	font: #{$font-size-base}/#{$line-height-base} $base-font-family;
-	min-width: $base-min-width;
+  min-width: $base-min-width;
+  color: $base-text-color;
+  font: #{$font-size-base}/#{$line-height-base} $base-font-family;
+  background: $base-background-color;
 }
 
 img {
-	max-width: 100%;
-	height: auto;
-	vertical-align: top;
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
 }
 
 p, ul, ol {
-	margin: 0 0 1em;
+  margin: 0 0 1em;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	line-height: 1.2;
-	margin: 0 0 .5em;
-	font-weight: bold;
+  margin: 0 0 .5em;
+  font-weight: bold;
+  line-height: 1.2;
 }
 
 h1 {
-	font-size: $h1-font-size;
+  font-size: $h1-font-size;
 }
 
 h2 {
-	font-size: $h2-font-size;
+  font-size: $h2-font-size;
 }
 
 h3 {
-	font-size: $h3-font-size;
+  font-size: $h3-font-size;
 }
 
 h4 {
-	font-size: $h4-font-size;
+  font-size: $h4-font-size;
 }
 
 h5 {
-	font-size: $h5-font-size;
+  font-size: $h5-font-size;
 }
 
 h6 {
-	font-size: $h6-font-size;
+  font-size: $h6-font-size;
 }
 
 a {
-	color: $base-link-color;
-	text-decoration: none;
+  color: $base-link-color;
+  text-decoration: none;
 }
 
 a:hover {
-	text-decoration: underline;
+  text-decoration: underline;
 }

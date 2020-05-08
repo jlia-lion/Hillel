@@ -1,41 +1,56 @@
+﻿@charset "utf-8";
+
+/*
+ * ========== common.scss ========== отметила, чтобы видеть, какие блоки в скомпилированном main.css к чему относятся
+ */
 .wrapper {
-	overflow: hidden;
-	position: relative;
+  position: relative;
+  overflow: hidden;
 }
 
-.container {
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 0 15px;
+body {
+  background-color: $dark-gray-body;
 }
 
-// Обертка для полей формы
+main {
+  padding: 10px;
 
-.form-group {
-	margin-bottom: 15px;
+  @media all and (min-width: 768px) {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 }
 
-// Поля формы
+.center {
+  text-align: center;
 
-.form-control {
-	display: block;
-	width: 100%;
-	padding: 10px 15px;
+  @media all and (min-width: 576px) {
+    text-align: left;
+  }
 }
 
-.form-control {
-	@include placeholder {
-		color: $red;
-	}
+.h2 {
+  display: inline-block;
+  margin-bottom: 30px;
+  color: $white;
+  font-weight: normal;
+  font-size: 30px;
+  text-transform: uppercase;
+  border-bottom: 4px solid $dark-gray;
 
-	&:focus {
-		border-color: $yellow;
-	}
+  @media all and (min-width: 576px) {
+    display: inline-block;
+    margin: 0 0 30px 10px;
+  }
+
+  @media all and (min-width: 768px) {
+    padding-left: 15px;
+    font-size: 36px;
+    border-bottom: 0;
+    border-left: 8px solid $dark-gray;
+  }
 }
 
-.grid {
-	img {
-		display: block;
-		width: 100%;
-	}
+img {
+  width: 100%;
 }
