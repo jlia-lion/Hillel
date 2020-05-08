@@ -1,4 +1,4 @@
-.wrapper {
+﻿.wrapper {
   overflow: hidden;
   position: relative;
 }
@@ -7,15 +7,14 @@
   outline: none;
 }
 
-.header {
-  border-bottom: 1px solid #e0e9f0;
+.form-group, .search-form, article > img, .card > img, .hr {
   margin-bottom: 30px;
 }
 
-.header-color {
+.header {
   background-color: #f5f8fb;
   padding: 30px 0;
-  border-bottom: 1px solid #e0e9f0;
+  margin-bottom: 30px;
 }
 
 .main {
@@ -24,15 +23,27 @@
   padding: 0 15px 30px 15px;
 }
 
-.footer {
+section, footer, .card + .card {
   border-top: 1px solid #e0e9f0;
-  padding: 20px 15px 30px 15px;
+}
+
+.hr {
+  border-bottom: 1px solid #e0e9f0;
+  border-top: 1px solid #e0e9f0;
+}
+
+section, footer, .card + .card {
+  padding-top: 20px;
 }
 
 .container {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+section, .card {
+  margin-bottom: 20px;
 }
 
 .logo img {
@@ -141,10 +152,6 @@ article a {
   text-decoration: none;
 }
 
-.form-group {
-  margin-bottom: 30px;
-}
-
 .form-control {
   border: 2px solid #ccc;
   border-radius: 5px;
@@ -158,7 +165,6 @@ article a {
 
 .search-form {
   position: relative;
-  margin-bottom: 30px;
 }
 
 .search-form .btn {
@@ -220,18 +226,8 @@ input:focus, textarea:focus {
   border-color: #009688;
 }
 
-section, .card + .card {
-  border-top: 1px solid #e0e9f0;
-  padding-top: 30px;
-}
-
-section, .card {
-  margin-bottom: 30px;
-}
-
 article > img, .card > img {
   border-radius: 4px;
-  margin-bottom: 30px;
 }
 
 ul, ol {
