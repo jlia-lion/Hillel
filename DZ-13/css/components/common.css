@@ -23,8 +23,8 @@ ul {
   color: #fff;
   text-decoration: none;
   background-color: #3a454d;
-  transition: background-color .2s ease-in-out;
   outline: 0;
+  transition: background-color .2s ease-in-out;
 }
 
 .hover-box a:hover {
@@ -111,13 +111,13 @@ img {
 }
 
 li button {
-  padding: 0;
-  font-size: 0;
   width: 10px;
   height: 10px;
-  border-radius: 50%;
+  padding: 0;
+  font-size: 0;
   background-color: #3a454d;
   border: none;
+  border-radius: 50%;
   outline: 0;
 }
 
@@ -132,41 +132,41 @@ li button:hover {
     padding: 0 30px;
   }
   .slider .slick-arrow {
-    border: none;
     font-size: 0;
+    border: none;
     outline: 0;
   }
   .slick-prev::before {
-    content: "\ea44";
-    font-size: 30px;
-    color: #3a454d;
     position: absolute;
-    left: 0;
     top: 50%;
-    font-family: "icomoon" !important;
-    speak: none;
-    font-style: normal;
+    left: 0;
+    color: #3a454d;
     font-weight: normal;
+    font-size: 30px;
+    font-family: "icomoon" !important;
+    font-style: normal;
     font-variant: normal;
-    text-transform: none;
     line-height: 1;
+    text-transform: none;
+    content: "\ea44";
+    speak: none;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
   .slick-next::before {
-    content: "\ea42";
-    font-size: 30px;
-    color: #3a454d;
     position: absolute;
-    right: 0;
     top: 50%;
-    font-family: "icomoon" !important;
-    speak: none;
-    font-style: normal;
+    right: 0;
+    color: #3a454d;
     font-weight: normal;
+    font-size: 30px;
+    font-family: "icomoon" !important;
+    font-style: normal;
     font-variant: normal;
-    text-transform: none;
     line-height: 1;
+    text-transform: none;
+    content: "\ea42";
+    speak: none;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }

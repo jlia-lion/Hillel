@@ -1,0 +1,117 @@
+/*body {
+  min-height: 100vh;
+  margin: 0;
+}*/
+/*
+.header {
+  position: relative;
+  padding: 10px;
+}*/
+
+.header-holder {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: block;
+  width: 100px;
+  height: 50px;
+}
+
+/* burger menu style */
+.menu-opener {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  vertical-align: top;
+  background: #00e0d0;
+  border-radius: 3px;
+}
+
+.menu-opener span,
+.menu-opener::after,
+.menu-opener::before {
+  position: absolute;
+  top: 50%;
+  right: 25%;
+  left: 25%;
+  height: 4px;
+  margin-top: -2px;
+  background: #fff;
+  border-radius: 4px;
+  transition: all .3s linear;
+}
+
+.menu-opener::after,
+.menu-opener::before {
+  top: 30%;
+  content: "";
+}
+
+.menu-opener::after {
+  top: 70%;
+}
+
+/* Стили для бургер кнопки когда довешивается класс на header */
+
+.mobile-menu-active .menu-opener span {
+  opacity: 0;
+}
+
+.mobile-menu-active .menu-opener::after,
+.mobile-menu-active .menu-opener::before {
+  top: 50%;
+  right: 15%;
+  left: 15%;
+  transform: rotate(45deg);
+}
+
+.mobile-menu-active .menu-opener::after {
+  transform: rotate(-45deg);
+}
+
+.menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  transform: scale(0.9);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .3s ease-in-out, visibility .3s ease-in-out, transform .3s ease-in-out;
+}
+
+.mobile-menu-active .menu {
+  transform: scale(1);
+  visibility: visible;
+  opacity: 1;
+}
+
+@media (min-width: 768px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header-holder {
+    display: block;
+  }
+
+  .menu {
+    position: static;
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .menu-opener {
+    display: none;
+  }
+}

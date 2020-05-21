@@ -1,0 +1,146 @@
+.header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  padding: 15px;
+
+  @include media(">=tablet") {
+    & .header-card {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  & .header-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+.header-card {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.header-holder {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo {
+  display: block;
+}
+
+/* burger menu style */
+.menu-opener {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  vertical-align: top;
+  background: $aqua;
+  border-radius: 3px;
+
+  @include media(">=tablet") {
+    & {
+      display: none;
+    }
+  }
+
+  & span,
+  &::after,
+  &::before {
+    position: absolute;
+    top: 50%;
+    right: 25%;
+    left: 25%;
+    height: 4px;
+    margin-top: -2px;
+    background: #fff;
+    border-radius: 4px;
+    transition: all .3s linear;
+  }
+
+  &::after,
+  &::before {
+    top: 30%;
+    content: "";
+  }
+
+  &::after {
+    top: 70%;
+  }
+}
+
+/* Стили для бургер кнопки когда довешивается класс на header */
+
+.mobile-menu-active .menu-opener span {
+  opacity: 0;
+}
+
+.mobile-menu-active .menu-opener::after,
+.mobile-menu-active .menu-opener::before {
+  top: 50%;
+  right: 15%;
+  left: 15%;
+  transform: rotate(45deg);
+}
+
+.mobile-menu-active .menu-opener::after {
+  transform: rotate(-45deg);
+}
+
+.menu {
+  position: absolute;
+  top: 70px;
+  right: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  transform: scale(0.9);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .3s ease-in-out, visibility .3s ease-in-out, transform .3s ease-in-out;
+
+  @include media(">=tablet") {
+    & {
+      position: static;
+      display: flex;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  & a {
+    display: block;
+    padding: 17px 10px;
+    color: $white;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:hover {
+      color: $aqua;
+      text-decoration: none;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  & li.active a {
+    color: $aqua;
+  }
+
+  .mobile-menu-active & {
+    transform: scale(1);
+    visibility: visible;
+    opacity: 1;
+  }
+}

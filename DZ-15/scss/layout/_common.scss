@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+}
+
+:focus {
+  outline: none;
+}
+
+.wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.width {
+  width: 800px;
+}
+
+.intro {
+  position: relative;
+  margin-bottom: 60px;
+  padding: 60px 0;
+  color: $white;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    background-image: linear-gradient(to top, #09052f, #311d5e);
+    opacity: .85;
+    content: "";
+  }
+
+  & .container {
+    position: relative;
+    min-height: 550px;
+
+    & .text-block {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      text-align: center;
+      transform: translate(-50%, -50%);
+
+      & h2 {
+        margin: 0 0 25px;
+        padding-bottom: 20px;
+        font-weight: 900;
+        text-transform: capitalize;
+
+        &::after {
+          position: absolute;
+          top: 32%;
+          right: 50%;
+          left: 50%;
+          width: 40px;
+          border-bottom: 1px solid $aqua;
+          content: "";
+        }
+
+        & p {
+          margin: 0 0 25px;
+        }
+      }
+    }
+  }
+}
+
+.slick-dots {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  & li {
+    margin: 10px;
+
+    & button {
+      width: 10px;
+      height: 10px;
+      padding: 0;
+      font-size: 0;
+      background-color: transparent;
+      border: 1px solid $white;
+      border-radius: 50%;
+      outline: 0;
+
+      &.active {
+        color: $aqua;
+      }
+    }
+
+    & button:hover {
+      background-color: $aqua;
+    }
+  }
+}
+
+.section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px;
+
+  @include media(">=tablet") {
+    & {
+      display: flex;
+    }
+
+    & .text {
+      padding: 0 0 0 20px;
+    }
+  }
+
+  & .img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  & .h3 {
+    margin: 0 0 25px;
+    color: #413d4b;
+    text-transform: uppercase;
+  }
+
+  & p {
+    margin: 0 0 25px;
+    color: #413d4b;
+  }
+}
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+
+ul {
+  margin-left: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
