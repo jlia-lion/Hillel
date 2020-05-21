@@ -1,7 +1,4 @@
 @charset "UTF-8";
-/*
- * ========== normalize.scss ========== отметила, чтобы видеть, какие блоки в скомпилированном main.css к чему относятся
- */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -37,8 +34,8 @@ main {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 h1 {
-  margin: .67em 0;
   font-size: 2em;
+  margin: 0.67em 0;
 }
 
 /* Grouping content
@@ -61,10 +58,10 @@ hr {
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 pre {
-  font-size: 1em;
-  /* 2 */
   font-family: monospace, monospace;
   /* 1 */
+  font-size: 1em;
+  /* 2 */
 }
 
 /* Text-level semantics
@@ -81,12 +78,12 @@ a {
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
 abbr[title] {
+  border-bottom: none;
+  /* 1 */
   text-decoration: underline;
   /* 2 */
-  /*  text-decoration: underline dotted;*/
+  text-decoration: underline dotted;
   /* 2 */
-  border-bottom: 0;
-  /* 1 */
 }
 
 /**
@@ -104,10 +101,10 @@ strong {
 code,
 kbd,
 samp {
-  font-size: 1em;
-  /* 2 */
   font-family: monospace, monospace;
   /* 1 */
+  font-size: 1em;
+  /* 2 */
 }
 
 /**
@@ -123,18 +120,18 @@ small {
  */
 sub,
 sup {
-  position: relative;
   font-size: 75%;
   line-height: 0;
+  position: relative;
   vertical-align: baseline;
 }
 
 sub {
-  bottom: -.25em;
+  bottom: -0.25em;
 }
 
 sup {
-  top: -.5em;
+  top: -0.5em;
 }
 
 /* Embedded content
@@ -157,14 +154,14 @@ input,
 optgroup,
 select,
 textarea {
-  margin: 0;
-  /* 2 */
-  font-size: 100%;
-  /* 1 */
   font-family: inherit;
+  /* 1 */
+  font-size: 100%;
   /* 1 */
   line-height: 1.15;
   /* 1 */
+  margin: 0;
+  /* 2 */
 }
 
 /**
@@ -204,8 +201,8 @@ button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
 [type="submit"]::-moz-focus-inner {
-  padding: 0;
   border-style: none;
+  padding: 0;
 }
 
 /**
@@ -222,7 +219,7 @@ button:-moz-focusring,
  * Correct the padding in Firefox.
  */
 fieldset {
-  padding: .35em .75em .625em;
+  padding: 0.35em 0.75em 0.625em;
 }
 
 /**
@@ -232,16 +229,16 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  display: table;
-  /* 1 */
   box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
   /* 1 */
   max-width: 100%;
   /* 1 */
   padding: 0;
   /* 3 */
-  color: inherit;
-  /* 2 */
   white-space: normal;
   /* 1 */
 }
@@ -285,10 +282,10 @@ textarea {
  * 2. Correct the outline style in Safari.
  */
 [type="search"] {
-  outline-offset: -2px;
-  /* 2 */
   -webkit-appearance: textfield;
   /* 1 */
+  outline-offset: -2px;
+  /* 2 */
 }
 
 /**
@@ -303,10 +300,10 @@ textarea {
  * 2. Change font properties to `inherit` in Safari.
  */
 ::-webkit-file-upload-button {
-  font: inherit;
-  /* 2 */
   -webkit-appearance: button;
   /* 1 */
+  font: inherit;
+  /* 2 */
 }
 
 /* Interactive
@@ -341,12 +338,64 @@ template {
   display: none;
 }
 
-/*
- * ========== include-media.scss ========== отметила, чтобы видеть, какие блоки в скомпилированном main.css к чему относятся
- */
-/*
- * ========== base.scss ========== отметила, чтобы видеть, какие блоки в скомпилированном main.css к чему относятся
- */
+form,
+fieldset {
+  margin: 0;
+  padding: 0;
+  border-style: none;
+}
+
+input,
+textarea {
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  padding: .3rem .5rem;
+  border: 1px solid #999;
+}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #999;
+}
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  opacity: 1;
+  color: #999;
+}
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: #999;
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #999;
+}
+input.placeholder,
+textarea.placeholder {
+  color: #999;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #000;
+}
+
+select {
+  -webkit-border-radius: 0;
+}
+
+textarea {
+  resize: vertical;
+  vertical-align: top;
+}
+
+button,
+input[type='button'],
+input[type='reset'],
+input[type='file'],
+input[type='submit'] {
+  cursor: pointer;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -358,7 +407,7 @@ html {
 body {
   min-width: 320px;
   color: #000;
-  font: 16px/1.2 "Rubik", "Arial", "Helvetica Neue", "Helvetica", sans-serif;
+  font: 16px/1.2 "Roboto", "Arial", "Helvetica Neue", "Helvetica", sans-serif;
   background: #fff;
 }
 
@@ -374,6 +423,7 @@ p, ul, ol {
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0 0 .5em;
+  font-family: "Playfair Display", "Times New Roman", "Times", "Baskerville", "Georgia", serif;
   font-weight: bold;
   line-height: 1.2;
 }
@@ -383,11 +433,11 @@ h1 {
 }
 
 h2 {
-  font-size: 27px;
+  font-size: 32px;
 }
 
 h3 {
-  font-size: 24px;
+  font-size: 22px;
 }
 
 h4 {
@@ -411,165 +461,299 @@ a:hover {
   text-decoration: underline;
 }
 
-/*
- * ========== button.scss ========== отметила, чтобы видеть, какие блоки в скомпилированном main.css к чему относятся
- */
-a.btn {
-  display: inline-block;
-}
-
 .btn {
-  margin: 0 auto;
+  display: inline-block;
   padding: 10px 20px;
-  color: #fff;
+  color: #00e0d0;
+  font-family: "Hammersmith One", sans-serif;
+  text-align: center;
   text-transform: uppercase;
-  background-color: #3a454d;
-  border: 2px solid #fff;
-  border-radius: 6px;
-  transition: background-color .3s ease-in-out, color .3s ease-in-out;
+  vertical-align: middle;
+  transition: color .3s ease-in-out;
 }
 .btn:hover {
-  color: #465a64;
-  background-color: #fff;
-}
-
-.center-btn {
-  text-align: center;
-}
-
-/*
- * ========== card.scss ========== отметила, чтобы видеть, какие блоки в скомпилированном main.css к чему относятся
- */
-.card {
-  position: relative;
-  margin-bottom: 30px;
-}
-.card:hover .hover-box {
-  opacity: 1;
-}
-.card .hover-box {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  text-decoration: none;
-  background-color: rgba(0, 0, 0, 0.3);
-  opacity: 0;
-  transition: opacity .3s ease-in-out;
-}
-.card .plus {
-  position: relative;
-  flex-grow: 1;
-}
-.card .plus::before {
-  width: 17px;
-  height: 2px;
-}
-.card .plus::after {
-  width: 2px;
-  height: 17px;
-}
-.card .plus::after, .card .plus::before {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  background-color: #fff;
-  transform: translate(-50%, -50%);
-  content: "";
-}
-@media (min-width: 576px) {
-  .card {
-    width: calc(50% - 10px);
-    margin: 0 5px 20px;
-  }
-}
-@media (min-width: 768px) {
-  .card {
-    width: calc(33% - 10px);
-  }
-}
-
-.card-title {
-  margin: 0;
-  padding: 15px;
   color: #fff;
-  font-weight: normal;
-  font-size: 16px;
-  text-transform: uppercase;
-  background-color: #292f36;
+  text-decoration: none;
 }
-@media (min-width: 768px) {
-  .card-title {
-    font-size: 18px;
-  }
+.btn.btn-outline {
+  background-color: transparent;
+  border: 2px solid #00e0d0;
+  transition: background-color .3s ease-in-out, color .3s ease-in-out;
+}
+.btn.btn-outline:hover {
+  color: #fff;
+  background-color: #00e0d0;
 }
 
-@media (min-width: 576px) {
-  .card-box {
-    display: inline-flex;
-    flex-wrap: wrap;
-    text-align: center;
-  }
+* {
+  box-sizing: border-box;
 }
-/*
- * ========== common.scss ========== отметила, чтобы видеть, какие блоки в скомпилированном main.css к чему относятся
- */
+
+:focus {
+  outline: none;
+}
+
 .wrapper {
   position: relative;
   overflow: hidden;
 }
 
-body {
-  background-color: #3a454d;
+.width {
+  width: 800px;
 }
 
-main {
-  padding: 10px;
+.intro {
+  position: relative;
+  margin-bottom: 60px;
+  padding: 100px 0;
+  color: #fff;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
 }
-@media (min-width: 768px) {
-  main {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
+.intro::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  background-image: linear-gradient(to top, #09052f, #311d5e);
+  opacity: .85;
+  content: "";
 }
-
-.center {
+.intro .box {
+  position: relative;
+}
+.intro .box .text-block {
+  max-width: 700px;
+  margin: 0 auto;
   text-align: center;
 }
-@media (min-width: 576px) {
-  .center {
-    text-align: left;
-  }
+.intro .box .text-block h2 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 0 25px;
+  padding-bottom: 20px;
+  font-weight: 900;
+  text-transform: capitalize;
+}
+.intro .box .text-block h2::after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  display: block;
+  width: 50px;
+  border-bottom: 1px solid #00e0d0;
+  transform: translateX(-50%);
+  content: "";
+}
+.intro .box .text-block h2 p {
+  margin: 0 0 25px;
 }
 
-.h2 {
-  display: inline-block;
-  margin-bottom: 30px;
-  color: #fff;
-  font-weight: normal;
-  font-size: 30px;
-  text-transform: uppercase;
-  border-bottom: 4px solid #465a64;
+.slick-dots {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
-@media (min-width: 576px) {
-  .h2 {
-    display: inline-block;
-    margin: 0 0 30px 10px;
-  }
+.slick-dots li {
+  margin: 10px;
+}
+.slick-dots li.slick-active button {
+  background-color: #00e0d0;
+}
+.slick-dots li button {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  font-size: 0;
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  outline: 0;
+}
+.slick-dots li button:hover {
+  background-color: #00e0d0;
+}
+
+.section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px;
+  color: #413d4b;
 }
 @media (min-width: 768px) {
-  .h2 {
-    padding-left: 15px;
-    font-size: 36px;
-    border-bottom: 0;
-    border-left: 8px solid #465a64;
+  .section {
+    display: flex;
   }
 }
-
-img {
+.section .text {
   width: 100%;
+  padding: 0 0 0 20px;
+}
+@media (min-width: 768px) {
+  .section .text {
+    width: 66%;
+  }
+}
+.section .img {
+  width: 100%;
+  margin-bottom: 60px;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .section .img {
+    width: 33%;
+  }
+}
+.section .h3 {
+  margin: 0 0 25px;
+  text-transform: uppercase;
+}
+.section p {
+  margin: 0 0 25px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+ul {
+  margin-left: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  padding: 15px;
+}
+@media (min-width: 768px) {
+  .header .header-card {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo {
+  display: block;
+}
+
+/* burger menu style */
+.menu-opener {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  vertical-align: top;
+  background: #00e0d0;
+  border-radius: 3px;
+}
+@media (min-width: 768px) {
+  .menu-opener {
+    display: none;
+  }
+}
+.menu-opener span, .menu-opener::after, .menu-opener::before {
+  position: absolute;
+  top: 50%;
+  right: 25%;
+  left: 25%;
+  height: 4px;
+  margin-top: -2px;
+  background: #fff;
+  border-radius: 4px;
+  transition: all .3s linear;
+}
+.menu-opener::after, .menu-opener::before {
+  top: 30%;
+  content: "";
+}
+.menu-opener::after {
+  top: 70%;
+}
+
+/* Стили для бургер кнопки когда довешивается класс на header */
+.mobile-menu-active .menu-opener span {
+  opacity: 0;
+}
+
+.mobile-menu-active .menu-opener::after,
+.mobile-menu-active .menu-opener::before {
+  top: 50%;
+  right: 15%;
+  left: 15%;
+  transform: rotate(45deg);
+}
+
+.mobile-menu-active .menu-opener::after {
+  transform: rotate(-45deg);
+}
+
+.menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  transform: scale(0.9);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .3s ease-in-out, visibility .3s ease-in-out, transform .3s ease-in-out;
+}
+@media (min-width: 768px) {
+  .menu {
+    position: static;
+    display: flex;
+    background-color: transparent;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+.menu a {
+  display: block;
+  padding: 17px 10px;
+  color: #fff;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.menu a:hover {
+  color: #00e0d0;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.menu li.active a {
+  color: #00e0d0;
+}
+.mobile-menu-active .menu {
+  transform: scale(1);
+  visibility: visible;
+  opacity: 1;
 }

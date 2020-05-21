@@ -27,14 +27,21 @@ $media-expressions: (
 // Медиазапросы НЕ ТРОГАЕМ
 @import "components/include-media";
 
+// Базовые миксины  (изменяем от макета к макету)
+@import "components/mixins";
+
+// Базовые стили для форм НЕ ТРОГАЕМ
+@import "components/form";
+
 // Базовые стили для типографии (изменяем от макета к макету)
 @import "components/base";
 
 // Стили для кнопок (изменяем от макета к макету)
 @import "components/button";
 
-// Стили для компоненты card (изменяем от макета к макету)
-@import "components/card";
-
 // Сюда пишем общие стили для проекта (изменяем от макета к макету)
 @import "layout/common";
+
+// Сюда пишем стили для хедера в проекта (изменяем от макета к макету)
+@import "layout/header";
+

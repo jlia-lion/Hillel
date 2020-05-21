@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+}
+
+:focus {
+  outline: none;
+}
+
+.wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.width {
+  width: 800px;
+}
+
+.intro {
+  position: relative;
+  margin-bottom: 60px;
+  padding: 100px 0;
+  color: $white;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    background-image: linear-gradient(to top, #09052f, #311d5e);
+    opacity: .85;
+    content: "";
+  }
+
+  .box {
+    position: relative;
+
+    .text-block {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+
+      h2 {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 0 25px;
+        padding-bottom: 20px;
+        font-weight: 900;
+        text-transform: capitalize;
+
+        &::after {
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          display: block;
+          width: 50px;
+          border-bottom: 1px solid $aqua;
+          transform: translateX(-50%);
+          content: "";
+        }
+
+        p {
+          margin: 0 0 25px;
+        }
+      }
+    }
+  }
+}
+
+.slick-dots {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  li {
+    margin: 10px;
+
+    &.slick-active {
+      button {
+        background-color: $aqua;
+      }
+    }
+
+    button {
+      width: 10px;
+      height: 10px;
+      padding: 0;
+      font-size: 0;
+      background-color: transparent;
+      border: 1px solid $white;
+      border-radius: 50%;
+      outline: 0;
+
+      &:hover {
+        background-color: $aqua;
+      }
+    }
+  }
+}
+
+.section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px;
+  color: #413d4b;
+
+  @include media(">=tablet") {
+    display: flex;
+  }
+
+  .text {
+    width: 100%;
+    padding: 0 0 0 20px;
+
+    @include media(">=tablet") {
+      width: 66%;
+    }
+  }
+
+  .img {
+    width: 100%;
+    margin-bottom: 60px;
+    text-align: center;
+
+    @include media(">=tablet"){
+      width: 33%;
+    }
+  }
+
+  .h3 {
+    margin: 0 0 25px;
+    text-transform: uppercase;
+  }
+
+  p {
+    margin: 0 0 25px;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+
+ul {
+  margin-left: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
