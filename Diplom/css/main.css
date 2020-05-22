@@ -1,0 +1,60 @@
+/*
+Error: File to import not found or unreadable: components/base.
+        on line 37 of main.scss
+
+32: 
+33: // Базовые стили для форм НЕ ТРОГАЕМ
+34: @import "components/form";
+35: 
+36: // Базовые стили для типографии (изменяем от макета к макету)
+37: @import "components/base";
+38: 
+39: // Стили для кнопок (изменяем от макета к макету)
+40: @import "components/button";
+41: 
+42: // Шрифты
+
+Backtrace:
+main.scss:37
+C:/Programs/Programming/Ruby-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/import_node.rb:67:in `rescue in import'
+C:/Programs/Programming/Ruby-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/import_node.rb:44:in `import'
+C:/Programs/Programming/Ruby-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/import_node.rb:28:in `imported_file'
+C:/Programs/Programming/Ruby-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/import_node.rb:37:in `css_import?'
+C:/Programs/Programming/Ruby-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:310:in `visit_import'
+C:/Programs/Programming/Ruby-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Programs/Programming/Ruby-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+C:/Programs/Programming/Ruby-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `block in with_base'
+C:/Programs/Programming/Ruby-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
+C:/Programs/Programming/Ruby-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `with_base'
+C:/Programs/Programming/Ruby-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `visit'
+C:/Programs/Programming/Ruby-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/Programs/Programming/Ruby-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/Programs/Programming/Ruby-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/Programs/Programming/Ruby-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+C:/Programs/Programming/Ruby-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+C:/Programs/Programming/Ruby-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+C:/Programs/Programming/Ruby-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/Programs/Programming/Ruby-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+C:/Programs/Programming/Ruby-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Programs/Programming/Ruby-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:157:in `visit'
+C:/Programs/Programming/Ruby-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:10:in `visit'
+C:/Programs/Programming/Ruby-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/Programs/Programming/Ruby-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/root_node.rb:20:in `render'
+C:/Programs/Programming/Ruby-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/engine.rb:290:in `render'
+C:/Programs/Programming/Ruby-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:464:in `update_stylesheet'
+C:/Programs/Programming/Ruby-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+C:/Programs/Programming/Ruby-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `each'
+C:/Programs/Programming/Ruby-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+C:/Programs/Programming/Ruby-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/plugin.rb:82:in `update_stylesheets'
+C:/Programs/Programming/Ruby-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:338:in `watch_or_update'
+C:/Programs/Programming/Ruby-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:51:in `process_result'
+C:/Programs/Programming/Ruby-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/exec/base.rb:50:in `parse'
+C:/Programs/Programming/Ruby-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/exec/base.rb:18:in `parse!'
+C:/Programs/Programming/Ruby-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/bin/scss:13:in `<top (required)>'
+C:/Programs/Programming/Ruby-x64/bin/scss:23:in `load'
+C:/Programs/Programming/Ruby-x64/bin/scss:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: File to import not found or unreadable: components/base.\A         on line 37 of main.scss\A \A 32: \A 33: // Базовые стили для форм НЕ ТРОГАЕМ\A 34: @import \"components/form\";\A 35: \A 36: // Базовые стили для типографии (изменяем от макета к макету)\A 37: @import \"components/base\";\A 38: \A 39: // Стили для кнопок (изменяем от макета к макету)\A 40: @import \"components/button\";\A 41: \A 42: // Шрифты"; }
