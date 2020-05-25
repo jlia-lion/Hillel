@@ -11,42 +11,113 @@
   overflow: hidden;
 }
 
-.intro-1 {
+.intro,
+.outro {
   position: relative;
   padding: 60px 0;
   overflow: hidden;
   color: $white;
+  text-shadow: 1px 1px 1px $gray-dark;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
+}
+
+.intro {
+  background-image: url("../images/header-sm.jpg");
+
+  @include media(">phone") {
+    background-image: url("../images/header-md.jpg");
+    background-position: 50% 0;
+  }
+
+  @include media(">tablet") {
+    background-image: url("../images/header-lg.jpg");
+    background-position: 50% 0;
+  }
+
+  @include media(">desktop") {
+    background-image: url("../images/header-xl.jpg");
+  }
+
+  @include media(">widescreen") {
+    background-image: url("../images/header-xxl.jpg");
+  }
+
+  @include media(">xlarge") {
+    background-image: url("../images/header-xxxl.jpg");
+  }
 
   &::after {
     position: absolute;
-    right: 0;
-    bottom: -20px;
+    right: -3px;
+    bottom: -60px;
     left: 0;
-    width: 100%;
-    height: 70px;
-    background-color: rgba(253, 99, 78, 0.5);
+    width: 103%;
+    height: 120px;
+    background-color: rgba(253, 99, 78, .5);
     transform: rotate(-2deg);
     content: "";
   }
 
   .container-header {
     position: relative;
-    min-height: 550px;
+    min-height: 350px;
+
+    @include media(">=tablet") {
+      min-height: 450px;
+    }
+
+    @include media(">=desktop") {
+      min-height: 550px;
+    }
+
+    @include media(">=widescreen") {
+      min-height: 750px;
+    }
+
+    @include media(">=xlarge") {
+      min-height: 960px;
+    }
 
     .text-header {
       position: absolute;
       bottom: 0;
       left: 0;
+      padding-left: 15px;
       text-align: right;
+
+      @include media(">=tablet") {
+        margin: 15px;
+
+        .header-card {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+
+      @include media(">=desktop") {
+        margin: 30px;
+      }
+
+      @include media(">=widescreen") {
+        margin: 60px;
+      }
+
+      @include media(">=xlarge") {
+        margin: 100px;
+      }
 
       h1 {
         margin-bottom: 10px;
-        padding-left: 15px;
         font-weight: normal;
+        font-size: 34px;
+        font-family: $avenir-font-sans-serif;
         text-transform: uppercase;
+
+        @include media(">=tablet") {
+          font-size: 40px;
+        }
 
         &::after {
           color: $green;
@@ -68,18 +139,50 @@
   }
 }
 
-.intro-2 {
-  position: relative;
-  padding: 60px 0;
-  overflow: hidden;
-  color: $white;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: cover;
+.outro {
+  background-image: url("../images/footer-sm.jpg");
 
-  .container-2 {
+  @include media(">phone") {
+    background-image: url("../images/footer-md.jpg");
+    background-position: 50% 0;
+  }
+
+  @include media(">tablet") {
+    background-image: url("../images/footer-lg.jpg");
+    background-position: 50% 0;
+  }
+
+  @include media(">desktop") {
+    background-image: url("../images/footer-xl.jpg");
+  }
+
+  @include media(">widescreen") {
+    background-image: url("../images/footer-xxl.jpg");
+  }
+
+  @include media(">xlarge") {
+    background-image: url("../images/footer-xxxl.jpg");
+  }
+
+  .container {
     position: relative;
-    min-height: 550px;
+    min-height: 350px;
+
+    @include media(">=tablet") {
+      min-height: 450px;
+    }
+
+    @include media(">=desktop") {
+      min-height: 550px;
+    }
+
+    @include media(">=widescreen") {
+      min-height: 750px;
+    }
+
+    @include media(">=xlarge") {
+      min-height: 960px;
+    }
 
     .text-block {
       position: absolute;
@@ -89,24 +192,67 @@
       transform: translate(-50%, -50%);
     }
   }
+
+  span,
+  &::before,
+  &::after {
+    position: absolute;
+    right: 0;
+
+    left: -6px;
+    width: 105%;
+    content: "";
+  }
+
+  &::before {
+    bottom: -70px;
+    height: 120px;
+    background-color: $black;
+    transform: rotate(3deg);
+  }
+
+  &::after {
+    bottom: -60px;
+    height: 68px;
+    background-color: $red;
+    transform: rotate(2deg);
+  }
+
+  span {
+    bottom: -160px;
+    height: 200px;
+    background-color: $black;
+    transform: rotate(-5deg);
+  }
 }
 
 .section {
-  max-width: 1600px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 15px;
-}
-
-.container-card {
-  max-width: 1600px;
-  margin: 0 auto;
+  padding: 0 15px;
 }
 
 .container-text {
   margin: 40px 0;
+  font-family: $proxima-font-sans-serif;
+
+  @include media(">=tablet") {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25%;
+    margin: 40px 15px 40px 0;
+  }
+
+  i {
+    display: block;
+    margin-bottom: 14px;
+    font-size: 40px;
+  }
 
   h3 {
     color: #0a1f3f;
+    font-family: $base-font-sans-serif;
   }
 
   p {
@@ -117,6 +263,7 @@
     color: $blue;
 
     &::after {
+      margin-left: 5px;
       content: "→";
     }
 
@@ -127,108 +274,254 @@
   }
 }
 
-.classic {
-  padding: 30px;
-  background-color: $white;
+.card {
+  color: $gray-dark;
+  outline: 0;
 
-  h6 {
-    color: $red;
-    text-transform: uppercase;
-  }
+  .classic {
+    padding: 30px;
+    background-color: $white;
 
-  h2 {
-    color: $green;
-    font-weight: 300;
-    text-transform: uppercase;
-  }
-
-  .a-underline {
-    color: $green;
-    text-decoration: underline;
-
-    &:hover {
+    h6 {
       color: $red;
+      font-family: $montserrat-font-sans-serif;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      color: $green;
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+
+    .a-underline {
+      color: $green;
+      text-decoration: underline;
+
+      &:hover {
+        color: $red;
+      }
+    }
+  }
+
+  .green {
+    padding: 30px;
+    color: $white;
+    background-color: $green;
+
+    h2 {
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+
+    h4 {
+      font-family: $montserrat-font-sans-serif;
+      text-transform: uppercase;
+    }
+  }
+
+  .card-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  i {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 30px;
+  }
+}
+
+.card-green {
+  @include media(">=tablet") {
+    display: flex;
+  }
+
+  &:nth-child(odd) {
+    flex-direction: row-reverse;
+
+    .img-box-green p {
+      text-align: right;
+    }
+  }
+
+  &:nth-child(even) {
+    flex-direction: row;
+
+    .img-box-green p {
+      text-align: left;
+    }
+  }
+
+  .img-box-green {
+    position: relative;
+
+    p {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: 10px;
+      padding: 10px;
+      color: $white;
+      font-size: 12px;
+
+      &::after {
+        margin-left: 6px;
+        color: $red;
+        font-weight: normal;
+        font-size: 30px;
+        font-family: "icomoon" !important;
+        font-style: normal;
+        font-variant: normal;
+        line-height: 1;
+        text-transform: none;
+        vertical-align: middle;
+        content: "\e904";
+        speak: none;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+    }
+
+    span {
+      color: $red;
+    }
+  }
+
+  img {
+    @include media(">=tablet") {
+      display: block;
+      width: 100%;
+      height: 390px;
+      object-fit: cover;
     }
   }
 }
 
-.green {
-  padding: 30px;
-  color: $white;
-  background-color: $green;
-
-  h2 {
-    font-weight: 300;
-    text-transform: uppercase;
+.card-red {
+  @include media(">=tablet") {
+    display: flex;
   }
 
-  h4 {
-    text-transform: uppercase;
-  }
 }
 
-.card {
-  color: $gray-dark;
-  outline: 0;
+.img-box-red {
+  position: relative;
+
+  @include media(">=tablet") {
+    padding-top: 300px;
+  }
+
+
+  @include media(">=desktop") {
+    padding-top: 360px;
+  }
+
+  img {
+    @include media(">=tablet") {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .hover-box {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 5px;
+    color: $white;
+    font-size: 12px;
+    font-family: $montserrat-font-sans-serif;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: transparent;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity .2s ease-in-out;
+
+    @include media(">=tablet") {
+      font-size: 10px;
+    }
+
+    @include media(">=desktop") {
+      padding: 30px;
+      font-size: 14px;
+    }
+
+    time {
+      @include media(">=tablet") {
+        padding-top: 2px;
+      }
+
+      @include media(">=desktop") {
+        padding-top: 0;
+      }
+
+    }
+
+    h6 {
+      font-size: 12px;
+      text-align: right;
+
+      @include media(">=tablet") {
+        font-size: 10px;
+      }
+
+      @include media(">=desktop") {
+        font-size: 14px;
+      }
+
+      &::after {
+        margin-left: 6px;
+        font-weight: normal;
+        font-family: "icomoon" !important;
+        font-style: normal;
+        font-variant: normal;
+        line-height: 1;
+        text-transform: none;
+        content: "\e907";
+        speak: none;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+    }
+  }
 }
 
 .card:hover .hover-box {
   opacity: 1;
 }
 
-.hover-box {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  padding: 30px;
-  color: $white;
-  letter-spacing: 1.4px;
-  text-transform: uppercase;
-  text-decoration: none;
-  background-color: transparent;
+.card:hover .title-box {
+  box-shadow: 0 0 60px rgba(0, 0, 0, 1);
   cursor: pointer;
-  opacity: 0;
   transition: opacity .2s ease-in-out;
-
-  time {
-    margin: 4px;
-  }
-
-  h6 {
-    &::after {
-      margin-left: 6px;
-      font-weight: normal;
-      font-size: 19px;
-      font-family: "icomoon" !important;
-      font-style: normal;
-      font-variant: normal;
-      line-height: 1;
-      text-transform: none;
-      content: "\e907";
-      speak: none;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-  }
 }
 
 .title-box {
   position: relative;
+
+  @include media(">=tablet") {
+    height: 310px;
+  }
 }
 
-.card:hover .title-box {
-  box-shadow: 0 0 60px rgba(0,0,0,1);
-  cursor: pointer;
-  transition: opacity .2s ease-in-out;
-}
-
-.img-box {
-  position: relative;
+.flex {
+  @include media(">=tablet") {
+    display: flex;
+  }
 }
 
 img {
@@ -240,6 +533,7 @@ img {
 }
 
 .background-green {
+  padding-top: 30px;
   background-color: $green;
 }
 
@@ -253,3 +547,20 @@ ul {
   list-style-type: none;
 }
 
+.max {
+  @include media(">=tablet") {
+    width: 66.66%;
+  }
+}
+
+.middle {
+  @include media(">=tablet") {
+    width: 50%;
+  }
+}
+
+.min {
+  @include media(">=tablet") {
+    width: 33.33%;
+  }
+}

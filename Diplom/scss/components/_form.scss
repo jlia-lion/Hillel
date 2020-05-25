@@ -1,44 +1,52 @@
-// forms
-
-form,
-fieldset {
-	margin: 0;
-	padding: 0;
-	border-style: none;
+form {
+  @include media(">=tablet") {
+    display: flex;
+    margin: 0 6px 0 9px;
+  }
 }
 
-input,
-textarea {
-	-webkit-appearance: none;
-	box-sizing: border-box;
-	padding: .3rem .5rem;
-	border: 1px solid $form-element-border-color;
+.form-group {
+  margin-bottom: 30px;
 
-	@include placeholder {
-		color: $placeholder-color;
-	}
+  @include media(">=tablet") {
+    margin: 6px;
+  }
 }
 
-// input focus state
-
-input:focus,
-textarea:focus {
-	border-color: $form-element-focus-border-color;
+.form-control {
+  width: 100%;
+  padding: 15px 20px;
+  font-family: $proxima-font-sans-serif;
+  border: none;
+  border-radius: 5px;
 }
 
-select {
-	-webkit-border-radius: 0;
-}
+.button {
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 15px 20px;
+  color: $white;
+  font-weight: 600;
+  font-size: 15px;
+  font-family: $proxima-font-sans-serif;
+  letter-spacing: 1.2px;
+  background-color: $green;
+  border: none;
+  border-radius: 6px;
 
-textarea {
-	resize: vertical;
-	vertical-align: top;
-}
+  @include media(">=tablet") {
+    margin: 6px;
+    padding: 7px 10px;
+  }
 
-button,
-input[type='button'],
-input[type='reset'],
-input[type='file'],
-input[type='submit'] {
-	cursor: pointer;
+  @include media(">=desktop") {
+    padding: 15px 10px;
+  }
+
+  i {
+    margin-left: 10px;
+    color: $white;
+    font-size: 12px;
+    text-align: center;
+  }
 }

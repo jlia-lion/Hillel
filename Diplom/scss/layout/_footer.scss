@@ -1,4 +1,82 @@
-footer {
-/*  background-color: $black;*/
+.footer {
+  padding: 50px 0;
+  color: $gray;
+  background-color: $black;
+
+  .footer-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+
+    @include media(">=tablet") {
+      display: flex;
+    }
+
+    .footer-blok {
+      margin-bottom: 30px;
+
+      @include media(">=tablet") {
+        margin: 30px 15px;
+      }
+
+      h5 {
+        margin-bottom: 20px;
+        color: $white;
+
+        @include media(">=tablet") {
+          margin-bottom: 30px;
+        }
+
+      }
+    }
+  }
 }
 
+.social-networks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+
+  @include media(">=tablet") {
+    flex-wrap: nowrap;
+  }
+
+  li {
+    margin: 0 20px 20px 0;
+
+    @include media(">=desktop") {
+      margin: 0 30px 30px 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    a {
+      display: block;
+      width: 51px;
+      height: 51px;
+      font-size: 21px;
+      line-height: 51px;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 50%;
+    }
+  }
+}
+
+.red {
+  background-color: $red-dark;
+}
+
+.blue {
+  background-color: $blue;
+}
+
+.dark-blue {
+  background-color: $dark-blue;
+}
+
+.indigo {
+  background-color: $indigo;
+}

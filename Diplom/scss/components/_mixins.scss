@@ -2,20 +2,20 @@
 /// @example scss - Usage
 ///   @extend %listreset;
 %listreset {
-	margin: 0;
-	padding: 0;
-	list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 // clearfix
 /// @example scss - Usage
 ///   @extend %clearfix;
 %clearfix {
-	&:after {
-		content: '';
-		display: block;
-		clear: both;
-	}
+  &:after {
+    display: block;
+    clear: both;
+    content: "";
+  }
 }
 
 /// Mixin for styling form-placeholders
@@ -33,9 +33,20 @@
 ///   }
 
 @mixin placeholder {
-	&::-webkit-input-placeholder {@content}
-	&::-moz-placeholder {opacity: 1; @content}
-	&:-moz-placeholder {@content}
-	&:-ms-input-placeholder {@content}
-	&.placeholder {@content}
+  &::-webkit-input-placeholder {
+    @content
+  }
+  &::-moz-placeholder {
+    opacity: 1;
+    @content
+  }
+  &:-moz-placeholder {
+    @content
+  }
+  &:-ms-input-placeholder {
+    @content
+  }
+  &.placeholder {
+    @content
+  }
 }
