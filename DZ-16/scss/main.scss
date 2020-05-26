@@ -1,0 +1,41 @@
+$breakpoints: (
+	'xs-phone': 480px,
+	'phone': 576px,
+	'tablet': 768px,
+	'desktop': 1024px,
+	'widescreen': 1200px
+);
+
+// keywords
+$media-expressions: (
+	'screen': 'screen',
+	'print': 'print',
+	'handheld': 'handheld',
+	'landscape': '(orientation: landscape)',
+	'portrait': '(orientation: portrait)',
+	'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
+	'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
+);
+
+// ligatured operators ≥ ≤
+
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+
+@import "bootstrap-custom";
+
+// Медиазапросы НЕ ТРОГАЕМ
+@import 'components/include-media';
+
+// Базовые миксины  (изменяем от макета к макету)
+@import 'components/mixins';
+
+// Сюда пишем общие стили для проекта (изменяем от макета к макету)
+@import 'layout/common';
+
+// Сюда пишем стили для хедера в проекта (изменяем от макета к макету)
+@import 'layout/header';
+
+// Сюда пишем стили для футера в проекта (изменяем от макета к макету)
+@import 'layout/footer';
